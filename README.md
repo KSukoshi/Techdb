@@ -10,5 +10,4 @@ Utilizados no projeto:
 
 * Solidus e-Commerce system base
 
-* Dependências
-- MySQL
+* MySQL
