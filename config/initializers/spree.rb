@@ -5,10 +5,10 @@ Spree.config do |config|
   # Core:
 
   # Default currency for new sites
-  config.currency = "USD"
+  config.currency = "BRL"
 
   # from address for transactional emails
-  config.mails_from = "store@example.com"
+  config.mails_from = "atendimento@tecnomult.com"
 
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
@@ -23,6 +23,7 @@ Spree.config do |config|
 
   # Custom logo for the frontend
   # config.logo = "logo/solidus.svg"
+  config.logo = "logo/tecnologo.png"
 
   # Template to use when rendering layout
   # config.layout = "spree/layouts/spree_application"
