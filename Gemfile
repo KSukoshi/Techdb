@@ -64,3 +64,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'solidus'
 gem 'solidus_auth_devise'
 gem 'solidus_backend', '~> 2.8', '>= 2.8.3'
+
+gem 'solidus_i18n', '~> 2.0'
+gem 'rails-i18n','~> 5.1'
+gem 'kaminari-i18n','~> 0.5.0'
+
+gem 'routing-filter', '~> 0.6.0'
