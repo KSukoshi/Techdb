@@ -22,7 +22,9 @@
             <%= f.text_field :email_cont, class: "form-control" %>
           </div>
         </div>
-        <div class="col-xs-12 col-md-3">
+        <div cl
+
+        ass="col-xs-12 col-md-3">
           <div class="form-group">
             <%= f.label :spree_roles_id_in, Spree.user_class.human_attribute_name(:spree_roles) %>
             <%= f.collection_select :spree_roles_id_in, @roles, :id, :name, {},
