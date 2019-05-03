@@ -1,0 +1,61 @@
+{:uriI"πfile://app/assets/javascripts/spree/backend/templates/variants/autocomplete_stock.hbs?type=text/x-handlebars-template&id=4579fee502d0ceb40c47f0c65a28830f417a1e70a51a9c14e08c7a6425f97f3a:ET:load_pathI"app/assets/javascripts;T:filenameI"Sapp/assets/javascripts/spree/backend/templates/variants/autocomplete_stock.hbs;T:	nameI"8spree/backend/templates/variants/autocomplete_stock;T:logical_pathI"<spree/backend/templates/variants/autocomplete_stock.hbs;T:content_typeI"text/x-handlebars-template;T:sourceI"¨<fieldset class="no-border-bottom">
+  <legend align="center">{{ t "select_stock" }}</legend>
+    <table class="stock-levels" data-hook="stock-levels">
+      <colgroup>
+        <col style="width: 30%;" />
+        <col style="width: 40%;" />
+        <col style="width: 20%;" />
+        <col style="width: 10%;" />
+      </colgroup>
+      <thead>
+        <th>{{ t "location" }}</th>
+        <th>{{ t "count_on_hand" }}</th>
+        <th>{{ t "quantity" }}</th>
+        <th class="actions"></th>
+      </thead>
+      <tbody>
+        {{#each variant.stock_items}}
+          <tr class="vertical-middle">
+            <td>{{this.stock_location_name}}</td>
+            {{#unless ../variant.track_inventory}}
+              <td>
+                It doesn't track inventory
+              </td>
+              <td>
+                <form>
+                  <input class="quantity" id="stock_item_quantity" data-stock-location-id="{{this.stock_location_id}}" type="number" min="1" value="1">
+                </form>
+              </td>
+              <td class="actions">
+                <button class="add_variant no-text fa fa-plus icon_link with-tip" data-stock-location-id="{{this.stock_location_id}}" title="{{ t "add" }}" data-action="add"></button>
+              </td>
+            {{else}}
+              {{#if this.available}}
+                <td>
+                  {{this.count_on_hand}}
+                  {{#if this.backorderable}} ({{ t "backorders_allowed" }}) {{/if}}
+                </td>
+                <td>
+                  <form>
+                    <input class="quantity" id="stock_item_quantity" data-stock-location-id="{{this.stock_location_id}}" type="number" min="1" value="1">
+                  </form>
+                </td>
+                <td class="actions">
+                  <button class="add_variant no-text fa fa-plus icon_link with-tip" data-stock-location-id="{{this.stock_location_id}}" title="{{ t "add" }}" data-action="add"></button>
+                </td>
+              {{else}}
+                <td>{{ t "out_of_stock" }}</td>
+                <td>0</td>
+                <td></td>
+              {{/if}}
+            {{/unless}}
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+</fieldset>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"Tprocessors:type=text/x-handlebars-template&file_type=text/x-handlebars-template;TTI"afile-digest://app/assets/javascripts/spree/backend/templates/variants/autocomplete_stock.hbs;TTF:charsetI"
+utf-8;F:digest"%®¬Á :æ¥£(+»ç†\Ö}û»ÙÖ≠ÈcUD››”:lengthi¨:dependencies_digest"%ô, MUåÀD©«ÅwÃ√ 6¬~H˝{V#[cËz√f7:idI"E4579fee502d0ceb40c47f0c65a28830f417a1e70a51a9c14e08c7a6425f97f3a;F:
+mtimel+öNÃ\

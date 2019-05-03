@@ -1,0 +1,28 @@
+{:uriI"Ìfile://app/assets/javascripts/spree/backend/templates/promotions/calculators/fields/tiered_flat_rate.hbs?type=text/x-handlebars-template&id=63de771a36b628184b27f181410f0ee39283779353eaad6b28799317deceb1b1:ET:load_pathI"app/assets/javascripts;T:filenameI"fapp/assets/javascripts/spree/backend/templates/promotions/calculators/fields/tiered_flat_rate.hbs;T:	nameI"Kspree/backend/templates/promotions/calculators/fields/tiered_flat_rate;T:logical_pathI"Ospree/backend/templates/promotions/calculators/fields/tiered_flat_rate.hbs;T:content_typeI"text/x-handlebars-template;T:sourceI"à<div class="fullwidth tier">
+  <a class="fa fa-trash remove js-remove-tier"></a>
+  <div class="row">
+    <div class="col-6">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">$</span>
+        </div>
+        <input class="js-base-input form-control" type="text" value={{baseField.value}}>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">$</span>
+        </div>
+        <input class="js-value-input form-control"
+          name="{{valueField.name}}" type="text" value={{valueField.value}}>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"Tprocessors:type=text/x-handlebars-template&file_type=text/x-handlebars-template;TTI"tfile-digest://app/assets/javascripts/spree/backend/templates/promotions/calculators/fields/tiered_flat_rate.hbs;TTF:charsetI"
+utf-8;F:digest"%ÍŒb+ßp ÑxdmiÙ¬ê¥Ÿ¹Å!ùîŒ­TÇG1:lengthià:dependencies_digest"%s"Î‰Ñ‹ó„ý	ˆH¿ª`Eœ_ù¤«íB±]Ñ÷ä~–ƒ¾:idI"E63de771a36b628184b27f181410f0ee39283779353eaad6b28799317deceb1b1;F:
+mtimel+šNÌ\

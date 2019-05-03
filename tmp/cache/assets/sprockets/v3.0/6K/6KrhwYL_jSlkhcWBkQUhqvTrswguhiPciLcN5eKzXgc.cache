@@ -1,0 +1,19 @@
+{:uriI"¶file://app/assets/javascripts/spree/backend/templates/products/upload_progress.hbs?type=text/x-handlebars-template&id=181b50e61061cb7626a32a90de25ab5d4c01cbc5ac2e8d61711af4d30671618a:ET:load_pathI"app/assets/javascripts;T:filenameI"Papp/assets/javascripts/spree/backend/templates/products/upload_progress.hbs;T:	nameI"5spree/backend/templates/products/upload_progress;T:logical_pathI"9spree/backend/templates/products/upload_progress.hbs;T:content_typeI"text/x-handlebars-template;T:sourceI"<div class="card progress-card">
+  <img src="{{ imgSrc }}" class="card-img-top img-fluid">
+
+  <div class="card-block">
+    <div class="progress">
+      <div class="progress-bar progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <div class="filename">{{ filename }}</div>
+    <div class="size">{{ size }}B</div>
+
+    <error class="text-danger {{#unless serverError}} hidden {{/unless}}">{{t 'admin.images.index.image_process_failed' }}</error>
+  </div>
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"Tprocessors:type=text/x-handlebars-template&file_type=text/x-handlebars-template;TTI"^file-digest://app/assets/javascripts/spree/backend/templates/products/upload_progress.hbs;TTF:charsetI"
+utf-8;F:digest"%ÀÚ{Fù(0sˆCA=DZMƒ|”“fyÁ¡¡üKì 3:lengthi:dependencies_digest"%1õ˜—¯.ÎVp¦xt°ÑZ_tiÁc¾Â‚‡—¶z<:idI"E181b50e61061cb7626a32a90de25ab5d4c01cbc5ac2e8d61711af4d30671618a;F:
+mtimel+šNÌ\

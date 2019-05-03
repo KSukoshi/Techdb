@@ -1,0 +1,28 @@
+{:uriI"ªfile://app/assets/javascripts/spree/backend/templates/taxons/_tree.hbs?type=text/x-handlebars-template&id=541e15bee4b93a040547c6cb057da7f8931f1a2783b37c20b11ffbbf813354ed:ET:load_pathI"app/assets/javascripts;T:filenameI"Dapp/assets/javascripts/spree/backend/templates/taxons/_tree.hbs;T:	nameI")spree/backend/templates/taxons/_tree;T:logical_pathI"-spree/backend/templates/taxons/_tree.hbs;T:content_typeI"text/x-handlebars-template;T:sourceI"®{{#each taxons}}
+  <li data-taxon-id="{{id}}" data-taxon-taxonomy-id="{{taxonomy_id}}">
+    {{#if (isRootTaxon) }}
+    <div class="taxon">
+    {{else}}
+    <div class="taxon sortable">
+      <i class="fa fa-arrows"></i>
+    {{/if}}
+      {{name}}
+      <div class="actions float-right">
+        <a href="#" class="js-taxon-add-child fa fa-plus icon_link no-text"></a>
+        <a href="{{admin_url}}/taxonomies/{{taxonomy_id}}/taxons/{{id}}/edit" class="fa fa-edit icon_link no-text"></a>
+        <a href="#" class="js-taxon-delete fa fa-trash icon_link no-text"></a>
+      </div>
+    </div>
+    {{#if taxons }}
+    <ul>
+      {{> taxons/_tree }}
+    </ul>
+    {{/if}}
+  </li>
+{{/each}}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"Tprocessors:type=text/x-handlebars-template&file_type=text/x-handlebars-template;TTI"Rfile-digest://app/assets/javascripts/spree/backend/templates/taxons/_tree.hbs;TTF:charsetI"
+utf-8;F:digest"%œÌO
+,=kÊ\ŒVfFò«VÑjS8i$B.Wà'Ğƒ:lengthi®:dependencies_digest"%z5eÎÌy¥Œ€PÜÂVÈ(I€Ù¾y^OQ}M	:idI"E541e15bee4b93a040547c6cb057da7f8931f1a2783b37c20b11ffbbf813354ed;F:
+mtimel+šNÌ\

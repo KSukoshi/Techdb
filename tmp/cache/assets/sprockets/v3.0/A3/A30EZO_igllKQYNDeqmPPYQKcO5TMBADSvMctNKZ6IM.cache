@@ -1,0 +1,40 @@
+{:uriI"√file://app/assets/javascripts/spree/backend/templates/stock_items/stock_location_stock_item.hbs?type=text/x-handlebars-template&id=d579a2b1515074e70d9e8e9dc42a080551755e95f044d444a66bca97c750d295:ET:load_pathI"app/assets/javascripts;T:filenameI"]app/assets/javascripts/spree/backend/templates/stock_items/stock_location_stock_item.hbs;T:	nameI"Bspree/backend/templates/stock_items/stock_location_stock_item;T:logical_pathI"Fspree/backend/templates/stock_items/stock_location_stock_item.hbs;T:content_typeI"text/x-handlebars-template;T:sourceI"s<td class="stock-location-name">{{stockLocationName}}</td>
+<td class="align-center">
+  <input id="backorderable-{{id}}"
+         name="backorderable"
+         type="checkbox"
+         value="backorderable"
+         {{#if backorderable}} checked="checked" {{/if}}
+   >
+</td>
+<td class="align-center">
+  <span
+    {{#if negative}}
+    class="negative count-on-hand-display"
+    {{else}}
+    class="count-on-hand-display"
+    {{/if}}
+    >{{count_on_hand}}</span>
+</td>
+<td>
+  <form>
+    <input
+    {{#if negative}}
+      class="fullwidth negative"
+    {{else}}
+      class="fullwidth"
+    {{/if}}
+    name="count_on_hand"
+    type="number"
+    value="0">
+  </form>
+</td>
+<td class="actions">
+  <a class="submit fa fa-check icon_link with-tip no-text" data-action="save" href="#"></a>
+  <a class="cancel fa fa-cancel icon_link with-tip no-text" data-action="cancel" href="#"></a>
+</td>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"Tprocessors:type=text/x-handlebars-template&file_type=text/x-handlebars-template;TTI"kfile-digest://app/assets/javascripts/spree/backend/templates/stock_items/stock_location_stock_item.hbs;TTF:charsetI"
+utf-8;F:digest"%¢ﬂ≠ê∂t©¶%\∏3·êè¥öÏ·T6—nû4«:lengthis:dependencies_digest"%ŒÊ<Ø‰=j±°ÅÒß~√˜ÇËU5!∂}TlÿΩÜıﬂ:idI"Ed579a2b1515074e70d9e8e9dc42a080551755e95f044d444a66bca97c750d295;F:
+mtimel+öNÃ\
