@@ -38,6 +38,7 @@ nav.menu {
   // As line height does not take the border width into account we need to subtract it.
   line-height: $main-header-height - 1px;
   margin-bottom: 25px;
+  max-width: 84%;
 }
 
 .admin-nav-menu {
