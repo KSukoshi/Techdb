@@ -1,0 +1,13 @@
+.log_entry {
+  &.success {
+    i {
+      color: $color-2;
+    }
+  }
+
+  &.fail {
+    i {
+      color: $color-5;
+    }
+  }
+}
