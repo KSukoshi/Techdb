@@ -53,7 +53,7 @@ $color-style-guide-section-border: darken($color-7, 10%);
 $color-style-guide-swatch-border: darken($color-7, 10%);
 
 // Table colors
-$color-tbl-odd:                  $color-1 !default;
+$color-tbl-odd:                  $color-7 !default;
 $color-tbl-even:                 very-light($color-3, 4) !default;
 $color-tbl-thead:                very-light($color-3, 4) !default;
 
@@ -109,7 +109,7 @@ $states: (
 //--------------------------------------------------------------
 $width-sidebar:                  200px !default;
 $width-sidebar-flyout:           225px !default;
-$border-sidebar:                 1px solid $color-sidebar-border !default;
+$border-sidebar:                 0px solid $color-sidebar-border !default;
 
 // Main
 //--------------------------------------------------------------
