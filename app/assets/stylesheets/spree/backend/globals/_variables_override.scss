@@ -5,10 +5,30 @@
   file in your application and set variables according to
   globals/_variables.scss file.
   --------------------------------------------------------- */
-  $color-1:                        #FFFFFF !default;    // White
-  $color-2:                        #9FC820 !default;    // Green
-  $color-3:                        #5498DA !default;    // Light Blue
-  $color-4:                        #6788A2 !default;    // Dark Blue
+  $color-1:                        #141414 !default;    // White
+  $color-2:                        #ff6b00 !default;    // Orange
+  $color-3:                        #f7f7f7 !default;    // Lighter gray
+  $color-4:                        #141414 !default;    // Dark
   $color-5:                        #C60F13 !default;    // Red
   $color-6:                        #FF9300 !default;    // Yellow
   $color-7:                        #F4F4F4 !default;    // Light Gray
+  $color-8:                        #141414 !default;    // Tecnomult Dark
+
+  $box-shadow:                     0px 3px 3px -2px hsla(0, 0%, 0%, 0.2) !default;
+
+  // Body base colors
+  $color-border:                   very-light($color-3, 12) !default;
+
+  // Basic navigation colors
+  $color-sidebar-bg:              $color-8 !default;
+  $color-sidebar-border:          $color-border !default;
+  $color-navbar:                  $color-1 !default;
+  $color-navbar-bg:               $color-3 !default;
+  $color-navbar-active:           $color-1 !default;
+  $color-navbar-active-bg:        $color-2 !default;
+  $color-navbar-submenu:          $color-3 !default;
+  $color-navbar-submenu-bg:       very-light($color-navbar-bg, 4) !default;
+  $color-navbar-submenu-active:   $color-2 !default;
+  $color-navbar-footer:           $color-3 !default;
+  $color-navbar-footer-bg:        $color-sidebar-bg !default;
+  $color-navbar-footer-active:    $color-2 !default;
