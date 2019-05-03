@@ -14,6 +14,7 @@
   $color-7:                        #F4F4F4 !default;    // Light Gray
   $color-8:                        #141414 !default;    // Tecnomult Dark
   $color-9:                        #FFFFFF !default;    // White
+  $color-10:                       #9e9e9e !default;    // Text gray
 
   $box-shadow:                     0px 3px 3px -2px hsla(0, 0%, 0%, 0.2) !default;
 
@@ -23,7 +24,7 @@
   // Basic navigation colors
   $color-sidebar-bg:              $color-8 !default;
   $color-sidebar-border:          $color-border !default;
-  $color-navbar:                  $color-3 !default;
+  $color-navbar:                  $color-10 !default;
   $color-navbar-bg:               $color-1 !default;
   $color-navbar-active:           $color-1 !default;
   $color-navbar-active-bg:        $color-2 !default;
