@@ -37,6 +37,7 @@ nav.menu {
   // Using line height for proper vertical centering.
   // As line height does not take the border width into account we need to subtract it.
   line-height: $main-header-height - 1px;
+  margin-bottom: 25px;
 }
 
 .admin-nav-menu {
