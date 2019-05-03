@@ -17,3 +17,100 @@ $color-4:                        #959595 !default;    // Dark Blue
 $color-5:                        #C60F13 !default;    // Red
 $color-6:                        #FF9300 !default;    // Yellow
 $color-7:                        #FFFFFF !default;    // Light Gray
+// Basic accents for admin
+$box-shadow:                     0px 3px 3px -2px hsla(0, 0%, 0%, 0.2) !default;
+
+// Body base colors
+$color-border:                  $color-1 !default;
+
+// Basic navigation colors
+$color-sidebar-bg:              $color-1 !default;
+$color-sidebar-border:          $color-border !default;
+$color-navbar:                  $color-1 !default;
+$color-navbar-bg:               $color-3 !default;
+$color-navbar-active:           $color-1 !default;
+$color-navbar-active-bg:        $color-2 !default;
+$color-navbar-submenu:          $color-3 !default;
+$color-navbar-submenu-bg:       very-light($color-navbar-bg, 4) !default;
+$color-navbar-submenu-active:   $color-2 !default;
+$color-navbar-footer:           $color-3 !default;
+$color-navbar-footer-bg:        $color-sidebar-bg !default;
+$color-navbar-footer-active:    $color-2 !default;
+
+
+
+// Color for spinner
+$color-spinner: #fff;
+
+// Style Guide
+$color-style-guide-code: darken($color-7, 10%);
+$color-style-guide-link: darken($color-7, 65%);
+$color-style-guide-nav: $color-7;
+$color-style-guide-nav-border: darken($color-7, 5%);
+$color-style-guide-nav-link: darken($color-7, 65%);
+$color-style-guide-nav-link-hover: darken($color-7, 5%);
+$color-style-guide-section-border: darken($color-7, 10%);
+$color-style-guide-swatch-border: darken($color-7, 10%);
+
+// Table colors
+$color-tbl-odd:                  $color-1 !default;
+$color-tbl-even:                 very-light($color-3, 4) !default;
+$color-tbl-thead:                very-light($color-3, 4) !default;
+
+// Pill colors
+//
+// For now these are custom assigned colors just for this section. As we go
+// about updating other areas of the admin we will likely want to pull these
+// colors out into better named variables.
+$color-pill-text: #1f2933;
+$color-pill-neutral: #e6e6e6;
+$color-pill-neutral-text: $color-pill-text;
+$color-pill-complete: #c8d8e8;
+$color-pill-complete-text: $color-pill-text;
+$color-pill-active: #bbe5b3;
+$color-pill-active-text: $color-pill-text;
+$color-pill-inactive: $color-pill-neutral;
+$color-pill-inactive-text: lighten($color-pill-text, 30%);
+$color-pill-pending: #ffe87d;
+$color-pill-pending-text: $color-pill-text;
+$color-pill-warning: #f9b36d;
+$color-pill-warning-text: $color-pill-text;
+$color-pill-error: #ff967b;
+$color-pill-error-text: $color-pill-text;
+
+// Available states
+$states: (
+  active,
+  address,
+  awaiting_return,
+  backorder,
+  balance_due,
+  canceled,
+  cart,
+  checkout,
+  complete,
+  completed,
+  confirm,
+  credit_owed,
+  delivery,
+  error,
+  failed,
+  inactive,
+  paid,
+  payment,
+  pending,
+  ready,
+  returned,
+  shipped,
+  void
+) !default;
+
+// Sidebar
+//--------------------------------------------------------------
+$width-sidebar:                  200px !default;
+$width-sidebar-flyout:           225px !default;
+$border-sidebar:                 1px solid $color-sidebar-border !default;
+
+// Main
+//--------------------------------------------------------------
+$main-header-height:             75px !default;
