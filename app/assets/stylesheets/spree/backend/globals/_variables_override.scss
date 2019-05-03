@@ -7,7 +7,7 @@
   --------------------------------------------------------- */
   $color-1:                        #141414 !default;    // White
   $color-2:                        #ff6b00 !default;    // Orange
-  $color-3:                        #f7f7f7 !default;    // Lighter gray
+  $color-3:                        #141414 !default;    // Lighter gray
   $color-4:                        #141414 !default;    // Dark
   $color-5:                        #C60F13 !default;    // Red
   $color-6:                        #FF9300 !default;    // Yellow
@@ -22,8 +22,8 @@
   // Basic navigation colors
   $color-sidebar-bg:              $color-8 !default;
   $color-sidebar-border:          $color-border !default;
-  $color-navbar:                  $color-1 !default;
-  $color-navbar-bg:               $color-3 !default;
+  $color-navbar:                  $color-3 !default;
+  $color-navbar-bg:               $color-1 !default;
   $color-navbar-active:           $color-1 !default;
   $color-navbar-active-bg:        $color-2 !default;
   $color-navbar-submenu:          $color-3 !default;
