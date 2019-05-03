@@ -22,14 +22,14 @@ $color-8:                        #FFFFFF !default;    // Tecnomult Dark
 $box-shadow:                     0px 3px 3px -2px hsla(0, 0%, 0%, 0.2) !default;
 
 // Body base colors
-$color-border:                  $color-8 !default;
+$color-border:                  $color-1 !default;
 
 // Basic navigation colors
-$color-sidebar-bg:              $color-8 !default;
+$color-sidebar-bg:              $color-1 !default;
 $color-sidebar-border:          $color-border !default;
-$color-navbar:                  $color-8 !default;
+$color-navbar:                  $color-1 !default;
 $color-navbar-bg:               $color-3 !default;
-$color-navbar-active:           $color-8 !default;
+$color-navbar-active:           $color-1 !default;
 $color-navbar-active-bg:        $color-2 !default;
 $color-navbar-submenu:          $color-3 !default;
 $color-navbar-submenu-bg:       very-light($color-navbar-bg, 4) !default;
