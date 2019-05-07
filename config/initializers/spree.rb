@@ -22,8 +22,7 @@ Spree.config do |config|
   # Frontend:
 
   # Custom logo for the frontend
-  # config.logo = "logo/solidus.svg"
-  config.logo = "logo/tecnologo.png"
+   config.logo = "logo/tecnologo.png"
 
   # Template to use when rendering layout
   # config.layout = "spree/layouts/spree_application"
@@ -32,8 +31,8 @@ Spree.config do |config|
   # Admin:
 
   # Custom logo for the admin
-  # config.admin_interface_logo = "logo/solidus.svg"
   config.admin_interface_logo = "logo/tecnologo.png"
+
   # Gateway credentials can be configured statically here and referenced from
   # the admin. They can also be fully configured from the admin.
   #
@@ -48,11 +47,11 @@ Spree.config do |config|
 end
 
 Spree::Frontend::Config.configure do |config|
-  config.locale = 'pt-BR'
+  config.locale = 'en'
 end
 
 Spree::Backend::Config.configure do |config|
-  config.locale = 'pt-BR'
+  config.locale = 'en'
 end
 
 Spree::Api::Config.configure do |config|

@@ -5,8 +5,8 @@ ruby '2.6.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
-# Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4', '< 0.6.0'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -63,10 +63,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'solidus'
 gem 'solidus_auth_devise'
-gem 'solidus_backend', '~> 2.8', '>= 2.8.3'
-
-gem 'solidus_i18n', '~> 2.0'
-gem 'rails-i18n','~> 5.1'
-gem 'kaminari-i18n','~> 0.5.0'
-
-gem 'routing-filter', '~> 0.6.0'

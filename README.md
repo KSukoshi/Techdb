@@ -1,13 +1,24 @@
-# Techdb
+# README
 
-Projeto de automatização do sistema de vendas e gestão interna da Tecnomult com sistemas integrados, funcionando em armonia para gerar um workflow melhor e ajudar no desenvolvimento da empresa
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Utilizados no projeto:
+Things you may want to cover:
 
-* Ruby 2.6.1
+* Ruby version
 
-* Rails 5.2.3
+* System dependencies
 
-* Solidus e-Commerce system base
+* Configuration
 
-* MySQL
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
