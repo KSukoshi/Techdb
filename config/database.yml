@@ -22,7 +22,7 @@ development:
   adapter: mysql2
   enconding: utf8
   reconnect: false
-  database: Techdb_development
+  database: techdb_development
   pool: 5
   host: localhost
   username: root
@@ -39,7 +39,7 @@ test:
   host: localhost
   username: root
   password:
-  database: Techdb_test
+  database: techdb_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -62,6 +62,6 @@ test:
 #
 production:
   <<: *default
-  database: Techdb_production
-  username: Techdb
+  database: techdb_production
+  username: techdb
   password: <%= ENV['TECHDB_DATABASE_PASSWORD'] %>
