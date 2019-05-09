@@ -67,3 +67,4 @@ gem 'solidus_i18n', '~> 2.0'
 gem 'rails-i18n', '~> 5.1'
 gem 'kaminari-i18n', '~> 0.5.0'
 gem 'correios-frete'
+gem "spree_correios"
