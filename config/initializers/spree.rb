@@ -59,3 +59,5 @@ Spree::Api::Config.configure do |config|
 end
 
 Spree.user_class = "Spree::LegacyUser"
+
+Rails.application.config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::CorreiosFrete
