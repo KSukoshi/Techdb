@@ -1,22 +1,34 @@
-# frozen_string_literal: true
-
 require_dependency 'spree/calculator'
 require_dependency 'spree/shipping_calculator'
 
 module Spree
   module Calculator::Shipping
-    class CorreiosAPI < ShippingCalculator
-      preference :flat_percent, :decimal, default: 0
+    class CorreiosApi < ShippingCalculator
+      preference :api_key, :string
 
-      def compute_package(package)
-        value = compute_from_price(total(package.contents))
-        preferred_currency = package.order.currency
-        currency_exponent = ::Money::Currency.find(preferred_currency).exponent
-        value.round(currency_exponent)
+      def compute_package(_package)
+        binding.pry
+        calcula
+
+        9090.90
       end
 
-      def compute_from_price(price)
-        price * BigDecimal(preferred_flat_percent.to_s) / 100.0
+      def self.description
+        "Correios API"
+      end
+
+
+      def calcula
+        binding.pry
+        frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
+                                                :cep_destino => "06783-090",
+                                                :peso => 7.3,
+                                                :comprimento => 30,
+                                                :largura => 20,
+                                                :altura => 35
+
+        servicos = frete.calcular :sedex, :pac
+        binding.pry
       end
     end
   end
