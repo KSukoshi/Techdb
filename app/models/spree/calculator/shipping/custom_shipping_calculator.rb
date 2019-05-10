@@ -5,16 +5,27 @@ require_dependency 'spree/shipping_calculator'
 module Spree
   class Calculator::Shipping::CustomShippingCalculator < Spree::ShippingCalculator
     def self.description
-      "SEDEX"
+      "CorreiosAPI"
     end
 
-    def compute_package(package)
-      frete = Correios::Frete::Calculador.new :cep_origem => "04094-050",
-                                              :cep_destino => "90619-900",
-                                              :peso => 0.3,
-                                              :comprimento => 30,
-                                              :largura => 15,
-                                              :altura => 2
-    end
+    def compute_package(_package)
+        binding.pry
+        calcula
+
+        9090.90
+      end
+
+      def calcula
+        binding.pry
+        frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
+                                                :cep_destino => "06783-090",
+                                                :peso => 7.3,
+                                                :comprimento => 30,
+                                                :largura => 20,
+                                                :altura => 35
+
+        servicos = frete.calcular :sedex, :pac
+        binding.pry
+      end
   end
 end
