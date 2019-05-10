@@ -9,16 +9,19 @@ module Spree
     end
 
     def compute_package(_package)
-      frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
-                                              :cep_destino => "06783-090",
-                                              :peso => 7.3,
-                                              :comprimento => 30,
-                                              :largura => 20,
-                                              :altura => 35
+        calcula
 
-      servicos = frete.calcular :sedex
+      end
 
-        :sedex
-    end
+      def calcula
+        frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
+                                                :cep_destino => "06783-090",
+                                                :peso => 7.3,
+                                                :comprimento => 30,
+                                                :largura => 20,
+                                                :altura => 35
+
+        servicos = frete.calcular :sedex, :pac
+      end
   end
 end
