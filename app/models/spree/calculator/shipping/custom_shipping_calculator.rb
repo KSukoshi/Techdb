@@ -9,23 +9,23 @@ module Spree
     end
 
     def compute_package(_package)
-        binding.pry
         calcula
 
-        9090.90
+
       end
 
       def calcula
-        binding.pry
         frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
-                                                :cep_destino => "06783-090",
-                                                :peso => 7.3,
-                                                :comprimento => 30,
+                                                :cep_destino => "03615-080",
+                                                :codigo_empresa => "0074596942",
+                                                :senha => "b2Q01",
+                                                :peso => 1.0,
+                                                :comprimento => 23,
                                                 :largura => 20,
-                                                :altura => 35
+                                                :altura => 12
 
         servicos = frete.calcular :sedex, :pac
-        binding.pry
+        servicos[:sedex].valor
       end
     end
   end
