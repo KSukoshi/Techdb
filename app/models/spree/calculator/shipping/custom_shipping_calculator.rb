@@ -14,7 +14,7 @@ module Spree
       end
 
       def calcula
-        Spree::LineItem(:weight)
+        Spree::LineItem
         frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
                                                 :cep_destino => :zipcode,
                                                 :peso => :weight,
