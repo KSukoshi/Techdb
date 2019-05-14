@@ -5,7 +5,6 @@ require_dependency 'spree/shipping_calculator'
 module Spree
   class Calculator::Shipping::CustomShippingCalculator < Spree::ShippingCalculator
     class PerItem
-      weight = Spree::Variant.where(params[:weight])
 
     def self.description
       "CorreiosAPI"
@@ -19,11 +18,11 @@ module Spree
       def calcula
 
         frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
-                                                :cep_destino => ":zipcode",
-                                                :peso => weight,
-                                                :comprimento => depth,
-                                                :largura => width,
-                                                :altura => height
+                                                :cep_destino => :zipcode,
+                                                :peso => :weight,
+                                                :comprimento => :depth,
+                                                :largura => :width,
+                                                :altura => :height
 
         servicos = frete.calcular :sedex, :pac
         servicos[:sedex].valor
