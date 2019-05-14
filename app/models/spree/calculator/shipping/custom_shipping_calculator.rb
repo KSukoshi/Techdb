@@ -4,7 +4,6 @@ require_dependency 'spree/shipping_calculator'
 
 module Spree
   class Calculator::Shipping::CustomShippingCalculator < Spree::ShippingCalculator
-    preference :weight
     def self.description
       "CorreiosAPI"
     end
