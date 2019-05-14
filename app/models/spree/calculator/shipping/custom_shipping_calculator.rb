@@ -4,6 +4,7 @@ require_dependency 'spree/shipping_calculator'
 
 module Spree
   class Calculator::Shipping::CustomShippingCalculator < Spree::ShippingCalculator
+    preference :weight
     def self.description
       "CorreiosAPI"
     end
@@ -16,13 +17,13 @@ module Spree
 
       def calcula
         frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
-                                                :cep_destino => "03615-080",
+                                                :cep_destino => ":zipcode",
                                                 :codigo_empresa => "0074596942",
                                                 :senha => "b2Q01",
-                                                :peso => 1.0,
-                                                :comprimento => 23,
-                                                :largura => 20,
-                                                :altura => 12
+                                                :peso => :weight,
+                                                :comprimento => :depth,
+                                                :largura => :width,
+                                                :altura => :height
 
         servicos = frete.calcular :sedex, :pac
         servicos[:sedex].valor
