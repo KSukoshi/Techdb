@@ -17,12 +17,10 @@ module Spree
       def calcula
         weight = order.line_items.inject(0) do |weight, line_item|
           line_item_weight = line_item.variant.weight
-        depth = order.line_items.inject(0) do |depth, line_item|
-          line_item_depth = line_item.variant.depth
-        width = order.line_items.inject(0) do |width, line_item|
-          line_item_width = line_item.variant.width
-        height = order.line_items.inject(0) do |height, line_item|
-          line_item_height = line_item.variant.height
+        weight = order.line_items.inject(0) do |weight, line_item|
+          line_item_weight = line_item.variant.weight
+        weight = order.line_items.inject(0) do |weight, line_item|
+          line_item_weight = line_item.variant.weight
 
         frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
                                                 :cep_destino => ":zipcode",
