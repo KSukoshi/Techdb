@@ -5,7 +5,7 @@ require_dependency 'spree/shipping_calculator'
 module Spree
   class Calculator::Shipping::CustomShippingCalculator < Spree::ShippingCalculator
     class PerItem
-      weight = Spree::Variant.find.params[:weight]
+      weight = Spree::Variant.find(10).params[:weight]
 
     def self.description
       "CorreiosAPI"
