@@ -5,7 +5,7 @@ require_dependency 'spree/shipping_calculator'
 module Spree
   class Calculator::Shipping::CustomShippingCalculator < Spree::ShippingCalculator
     class PerItem
-
+    end
     def self.description
       "CorreiosAPI"
     end
@@ -29,4 +29,3 @@ module Spree
       end
     end
   end
-end
