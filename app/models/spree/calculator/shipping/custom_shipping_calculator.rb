@@ -15,6 +15,7 @@ module Spree
       end
 
       def calcula
+        Spree::Product.find(1).master
         frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
                                                 :cep_destino => ":zipcode",
                                                 :codigo_empresa => "0074596942",
