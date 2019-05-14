@@ -15,15 +15,21 @@ module Spree
       end
 
       def calcula
-        Spree::LineItems
+        weight = order.line_items.inject(0) do |weight, line_item|
+          line_item_weight = line_item.variant.weight
+        depth = order.line_items.inject(0) do |depth, line_item|
+          line_item_depth = line_item.variant.depth
+        width = order.line_items.inject(0) do |width, line_item|
+          line_item_width = line_item.variant.width
+        height = order.line_items.inject(0) do |height, line_item|
+          line_item_height = line_item.variant.height
+
         frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
                                                 :cep_destino => ":zipcode",
-                                                :codigo_empresa => "0074596942",
-                                                :senha => "b2Q01",
-                                                :peso => :weight,
-                                                :comprimento => :depth,
-                                                :largura => :width,
-                                                :altura => :height
+                                                :peso => weight,
+                                                :comprimento => depth,
+                                                :largura => width,
+                                                :altura => height
 
         servicos = frete.calcular :sedex, :pac
         servicos[:sedex].valor
