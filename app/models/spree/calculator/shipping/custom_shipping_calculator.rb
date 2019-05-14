@@ -34,3 +34,6 @@ module Spree
       end
     end
   end
+end
+end
+end
