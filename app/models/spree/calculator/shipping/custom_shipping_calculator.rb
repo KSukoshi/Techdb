@@ -11,17 +11,10 @@ module Spree
     def compute_package(_package)
         calcula
 
-
       end
 
       def calcula
-        weight = order.line_items.inject(0) do |weight, line_item|
-          line_item_weight = line_item.variant.weight
-        weight = order.line_items.inject(0) do |weight, line_item|
-          line_item_weight = line_item.variant.weight
-        weight = order.line_items.inject(0) do |weight, line_item|
-          line_item_weight = line_item.variant.weight
-
+        weight = Spree::LineItems.find(0).weight
         frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
                                                 :cep_destino => ":zipcode",
                                                 :peso => weight,
@@ -34,6 +27,3 @@ module Spree
       end
     end
   end
-end
-end
-end
