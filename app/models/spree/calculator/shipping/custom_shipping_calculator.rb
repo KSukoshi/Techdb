@@ -3,7 +3,7 @@ require_dependency 'spree/calculator'
 require_dependency 'spree/shipping_calculator'
 
 module Spree
-  module Calculator::Shipping::CustomShippingCalculator < Spree::ShippingCalculator
+  module Calculator::Shipping::CustomShippingCalculator < ShippingCalculator
     class PerItem < ShippingCalculator
       preference :weight, :decimal, default: 0
       preference :depth, :decimal, default: 0
