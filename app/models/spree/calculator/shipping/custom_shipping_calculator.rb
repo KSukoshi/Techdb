@@ -3,7 +3,14 @@ require_dependency 'spree/calculator'
 require_dependency 'spree/shipping_calculator'
 
 module Spree
-  class Calculator::Shipping::CustomShippingCalculator < Spree::ShippingCalculator
+  module Calculator::Shipping::CustomShippingCalculator < Spree::ShippingCalculator
+    class PerItem < Spree::ShippingCalculator
+      preference :weight, :decimal, default: 0
+      preference :depth, :decimal, default: 0
+      preference :width, :decimal, default: 0
+      preference :height, :decimal, default: 0
+      preference :zipcode, :string, default: ->{ Spree::Address[:zipcode] }
+      
     def self.description
       "CorreiosAPI"
     end
@@ -14,7 +21,6 @@ module Spree
       end
 
       def calcula
-        properties = Spree::LineItem.find(1).variant_properties
         frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
                                                 :cep_destino => :zipcode,
                                                 :peso => :weight,
@@ -27,3 +33,4 @@ module Spree
       end
     end
   end
+end
