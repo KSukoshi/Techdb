@@ -3,9 +3,13 @@ require_dependency 'spree/calculator'
 require_dependency 'spree/shipping_calculator'
 
 module Spree
-  module Calculator::Shipping::CustomShippingCalculator
+  module Calculator::Shipping::CustomShippingCalculator < Spree::ShippingCalculator
     class PerItem < ShippingCalculator
-      
+      preference :weight, :decimal, default: 0
+      preference :depth, :decimal, default: 0
+      preference :width, :decimal, default: 0
+      preference :height, :decimal, default: 0
+      preference :zipcode, :string, default: ->{ Spree::Address[:zipcode] }
 
     def self.description
       "CorreiosAPI"
