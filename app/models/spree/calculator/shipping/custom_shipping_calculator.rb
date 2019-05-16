@@ -14,6 +14,7 @@ module Spree
       end
 
       def calcula
+        binding.pry
         frete = Correios::Frete::Calculador.new :cep_origem => "01207-000",
                                                 :cep_destino => :zipcode,
                                                 :peso => Spree::Variant.select(:weight),
