@@ -21,7 +21,7 @@ module Spree
       end
 
       def calcula
-        frete = Correios::Frete::Calculador.new :cep_origem => "22790-671",
+        frete = Correios::Frete::Calculador.new :cep_origem => "01207-000",
                                                 :cep_destino => :zipcode,
                                                 :peso => :weight,
                                                 :comprimento => :depth,
