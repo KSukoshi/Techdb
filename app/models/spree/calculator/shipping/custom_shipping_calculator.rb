@@ -9,11 +9,10 @@ module Spree
     end
 
     def compute_package(_package)
-        calcula
-
+        run_api
       end
 
-      def calcula
+      def run_api
         order_correios = Spree::LineItem.last.order_id
         current_correios = Spree::Order.find(order_correios)
         zip_correios = Spree::Address.find(current_correios).zipcode
