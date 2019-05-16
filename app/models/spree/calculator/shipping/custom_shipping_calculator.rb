@@ -14,9 +14,12 @@ module Spree
       end
 
       def calcula
+        order_correios = Spree::LineItem.last.order_id
+        current_correios = Spree::Order.find(order_correios)
+        zip_correios = Spree::Address.find(current_correios).zipcode
         variant_correios = Spree::LineItem.last.variant_id
         frete = Correios::Frete::Calculador.new :cep_origem => "01207-000",
-                                                :cep_destino => "03615-080",
+                                                :cep_destino => zip_correios,
                                                 :peso => Spree::Variant.find(variant_correios).weight,
                                                 :comprimento => Spree::Variant.find(variant_correios).depth,
                                                 :largura => Spree::Variant.find(variant_correios).width,
