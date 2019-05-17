@@ -14,7 +14,7 @@ module Spree
 
       def run_api
         order_correios = Spree::LineItem.last.order_id
-        current_correios = Spree::Order.find(order_correios)
+        current_correios = Spree::Order.find(order_correios).ship_address_id
         zip_correios = Spree::Address.find(current_correios).zipcode
         variant_correios = Spree::LineItem.last.variant_id
         frete = Correios::Frete::Calculador.new :cep_origem => "01207-000",
