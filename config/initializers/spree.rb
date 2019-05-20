@@ -1,6 +1,7 @@
 # Configure Solidus Preferences
 # See http://docs.solidus.io/Spree/AppConfiguration.html for details
 Rails.application.config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::CustomShippingCalculator
+Rails.application.config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::PacShipping
 Spree.config do |config|
 
   # Core:
