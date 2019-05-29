@@ -239,11 +239,6 @@ class Spree::Admin::ResourceController < Spree::Admin::BaseController
   end
 
   def list_activity_url(options = {})
-    if parent?
-      spree.new_polymorphic_url([:admin, parent, model_class], options)
-    else
-      spree.new_polymorphic_url([:admin, model_class], options)
-    end
   end
 
   def edit_object_url(object, options = {})
