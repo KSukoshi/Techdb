@@ -5,6 +5,15 @@ Rails.application.routes.draw do
   #
   # We ask that you don't use the :as option here, as Solidus relies on it being the default of "spree"
   mount Spree::Core::Engine, at: '/'
-  get "/app/views/spree/admin/list_activity", to: "resource_controller#list_activity", as: "list_activity"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  Spree::Core::Engine.add_routes do
+  #public enquiries, e.g. that inherit Spree::StoreController
+  get 'activity', :to => 'products#activity', :as => :list_activity_url
+end
+
+Spree::Core::Engine.add_routes do
+  namespace :admin do
+    resources :list_activity_url
+  end
+end
 end

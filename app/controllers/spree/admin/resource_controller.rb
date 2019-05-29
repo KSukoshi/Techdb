@@ -3,7 +3,7 @@
 class Spree::Admin::ResourceController < Spree::Admin::BaseController
   include Spree::Backend::Callbacks
 
-  helper_method :new_object_url, :edit_object_url, :object_url, :collection_url, :list_activity
+  helper_method :new_object_url, :edit_object_url, :object_url, :collection_url, :list_activity_url
   before_action :load_resource, except: :update_positions
   rescue_from ActiveRecord::RecordNotFound, with: :resource_not_found
 
@@ -238,7 +238,7 @@ class Spree::Admin::ResourceController < Spree::Admin::BaseController
     end
   end
 
-  def list_activity(options = {})
+  def list_activity_url(options = {})
     if parent?
       spree.new_polymorphic_url([:admin, parent, model_class], options)
     else
