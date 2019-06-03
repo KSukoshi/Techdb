@@ -1,11 +1,11 @@
-<% @stockmovelog.each do |stocklog| %>
+<% @stockmovelog.each do |movement| %>
 <table>
       <tr>
-        <td><% stocklog.id %></td>
-        <td class="align-center"><% stocklog.quantity %></td>
-        <td><% stocklog.created_at %></td>
-        <td class="align-right"><% stocklog.updated_at %></td>
-        <td class="actions" data-hook="admin_products_index_row_actions"><% stocklog.action %></td>
+        <td><% movement.id %></td>
+        <td class="align-center"><% movement.quantity %></td>
+        <td><% movement.created_at %></td>
+        <td class="align-right"><% movement.updated_at %></td>
+        <td class="actions" data-hook="admin_products_index_row_actions"><% movement.action %></td>
       </tr>
 </table>
 <% end %>
