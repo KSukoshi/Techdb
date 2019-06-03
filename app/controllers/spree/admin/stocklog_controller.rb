@@ -5,7 +5,7 @@ module Spree
       def index
       end
       def find_movements
-        @stockmovelog = Spree::StockMovement.all
+        @stockmovelog = Spree::StockMovement.order(:id)
       end
     end
   end
