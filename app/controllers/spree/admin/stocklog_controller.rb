@@ -1,6 +1,6 @@
 module Spree
   module Admin
-    class Spree::Admin::StocklogController < Spree::Admin::BaseController
+    class Spree::Admin::StocklogController < ResourceController
       before_action :load_movements
       def index
       end
