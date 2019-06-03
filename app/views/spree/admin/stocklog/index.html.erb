@@ -1,5 +1,5 @@
+</table>
 <% @stockmovelog.each do |movement| %>
-<table>
       <tr>
         <td><% movement.id %></td>
         <td class="align-center"><% movement.quantity %></td>
@@ -7,5 +7,5 @@
         <td class="align-right"><% movement.updated_at %></td>
         <td class="actions" data-hook="admin_products_index_row_actions"><% movement.action %></td>
       </tr>
-</table>
 <% end %>
+</table>
