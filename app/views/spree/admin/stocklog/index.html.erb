@@ -1,13 +1,33 @@
-<tbody>
-  <% @stockmovelog.each do |movement| %>
-      <tr>
-        <td><%= movement.id %></td>
-        <td class="align-center">
-        </td>
-        <td><%= movement.created_at %></td>
-        <td class="align-right"><%= movement.updated_at %></td>
-        <td class="actions">
-        </td>
-      </tr>
-  <% end %>
-</tbody>
+<%= paginate @stockmovelog, theme: "solidus_admin" %>
+
+<% if @stockmovelog.any? %>
+  <table class="index" id="listing_products">
+    <colgroup>
+       <col style="width: 15%;">
+       <col style="width: 5%;">
+       <col style="width: 50%;">
+       <col style="width: 15%;">
+       <col style="width: 15%;">
+    </colgroup>
+    <tbody>
+      <% @stockmovelog.each do |movement| %>
+          <tr>
+            <td><%= movement.quantity %></td>
+            <td class="align-center">
+              <%= render 'spree/admin/shared/image', image: product.gallery.images.first, size: :mini %>
+            </td>
+            <td class="align-right"><%= movement.created_at %></td>
+            <td class="align-right"><%= movement.updated_at %></td>
+          </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <div class="no-objects-found">
+    <%= render 'spree/admin/shared/no_objects_found',
+                  resource: Spree::Product,
+                  new_resource_url: new_object_url %>
+  </div>
+<% end %>
+
+<%= paginate @stockmovelog, theme: "solidus_admin" %>
