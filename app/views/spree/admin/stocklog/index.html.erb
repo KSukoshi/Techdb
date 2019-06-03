@@ -1,4 +1,3 @@
-<% if @collection.any? %>
   <table class="index" id="listing_products">
     <colgroup>
        <col style="width: 15%;">
@@ -36,10 +35,3 @@
       <% end %>
     </tbody>
   </table>
-<% else %>
-  <div class="no-objects-found">
-    <%= render 'spree/admin/shared/no_objects_found',
-                  resource: Spree::Product,
-                  new_resource_url: new_object_url %>
-  </div>
-<% end %>
