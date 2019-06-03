@@ -11,8 +11,8 @@
       <% @stockmovelog.each do |movement| %>
           <tr>
             <td><%= movement.quantity %></td>
-            <td class="align-center"><%= movement.created_at %></td>
-            <td class="align-right"><%= movement.updated_at %></td>
+            <td class="align-center"><%= movement.updated_at %></td>
+            <td class="align-right"><%= Spree::Variant.model_name.human %></td>
           </tr>
       <% end %>
     </tbody>
