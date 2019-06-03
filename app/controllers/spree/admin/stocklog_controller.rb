@@ -8,7 +8,6 @@ module Spree
         @stockmovelog = Spree::StockMovement.all
       end
       def load_attr_resource
-        def load_stock_management_data
           @stock_locations = Spree::StockLocation.accessible_by(current_ability, :read)
           @stock_item_stock_locations = params[:stock_location_id].present? ? @stock_locations.where(id: params[:stock_location_id]) : @stock_locations
           @variant_display_attributes = self.class.variant_display_attributes
@@ -16,8 +15,6 @@ module Spree
           @variants = @variants.includes(:images, stock_items: :stock_location, product: :variant_images)
           @variants = @variants.includes(option_values: :option_type)
           @variants = @variants.order(id: :desc).page(params[:page]).per(params[:per_page] || Spree::Config[:orders_per_page])
-        end
-
       end
     end
   end
