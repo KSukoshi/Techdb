@@ -1,5 +1,5 @@
+<% @stockmovelog.each do |stocklog| %>
 <table>
-  <% @stockmovelog.each do |stocklog| %>
       <tr>
         <td><% stocklog.id %></td>
         <td class="align-center"><% stocklog.quantity %></td>
@@ -7,5 +7,5 @@
         <td class="align-right"><% stocklog.updated_at %></td>
         <td class="actions" data-hook="admin_products_index_row_actions"><% stocklog.action %></td>
       </tr>
-  <% end %>
 </table>
+<% end %>
