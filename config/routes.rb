@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # We ask that you don't use the :as option here, as Solidus relies on it being the default of "spree"
   mount Spree::Core::Engine, at: '/'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  Spree::Core::Engine.routes.prepend do
-    match '/admin/stocklog', :to => 'admin/stocklog#index', :as => :stocklog
+  Spree::Core::Engine.routes.draw do
+    get '/admin/stocklog', :to => 'admin/stocklog#index', :as => :stocklog
   end
 end
