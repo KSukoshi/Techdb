@@ -1,7 +1,6 @@
 module Spree
   module Admin
-    class Spree::Admin::StocklogController < Spree::Admin::BaseController
-    class StocklogController < ResourceController
+    class Spree::Admin::StocklogController < ResourceController < Spree::Admin::BaseController
       class_attribute :variant_display_attributes
       self.variant_display_attributes = [
         { translation_key: :sku, attr_name: :sku },
@@ -61,5 +60,4 @@ module Spree
       end
     end
   end
-end
 end
