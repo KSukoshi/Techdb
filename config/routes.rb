@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   mount Spree::Core::Engine, at: '/'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   Spree::Core::Engine.routes.prepend do
-    namespace :admin do
-      match 'stocklog', :to => 'stocklog#index', :as => :stocklog
-    end
+    match '/admin/stocklog', :to => 'admin/stocklog#index', :as => :stocklog
   end
 end
