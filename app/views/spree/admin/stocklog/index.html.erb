@@ -11,10 +11,7 @@
       <% @stockmovelog.each do |movement| %>
           <tr>
             <td><%= movement.quantity %></td>
-            <td class="align-center">
-              <%= render 'spree/admin/shared/image', image: product.gallery.images.first, size: :mini %>
-            </td>
-            <td class="align-right"><%= movement.created_at %></td>
+            <td class="align-center"><%= movement.created_at %></td>
             <td class="align-right"><%= movement.updated_at %></td>
           </tr>
       <% end %>
