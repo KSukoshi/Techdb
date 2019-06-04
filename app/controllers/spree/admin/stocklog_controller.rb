@@ -7,8 +7,33 @@ module Spree
         { translation_key: :name, attr_name: :name }
       ]
 
+
       before_action :load_movements, :load_stock_management_data
       def index
+      end
+      def build_resource
+        variant = Spree::Variant.accessible_by(current_ability, :read).find(params[:variant_id])
+        stock_location = Spree::StockLocation.accessible_by(current_ability, :read).find(params[:stock_location_id])
+        stock_location.stock_movements.build(stock_movement_params).tap do |stock_movement|
+          stock_movement.originator = try_spree_current_user
+          stock_movement.stock_item = stock_location.set_up_stock_item(variant)
+        end
+      end
+
+      def permitted_resource_params
+        {}
+      end
+
+      def stock_movement_params
+        params.require(:stock_movement).permit(permitted_stock_movement_attributes)
+      end
+
+      def determine_backorderable
+        @stock_item.backorderable = params[:stock_item].present? && params[:stock_item][:backorderable].present?
+      end
+
+      def load_product
+        @product = Spree::Product.accessible_by(current_ability, :read).friendly.find(params[:product_slug]) if params[:product_slug]
       end
       def load_movements
         @stockmovelog = Spree::StockMovement.all
