@@ -22,6 +22,11 @@ module Spree
         @variants = @variants.includes(option_values: :option_type)
         @variants = @variants.order(id: :desc).page(params[:page]).per(params[:per_page] || Spree::Config[:orders_per_page])
       end
+      def variant_scope
+        scope = Spree::Variant.accessible_by(current_ability, :read)
+        scope = scope.where(product: @product) if @product
+        scope
+      end
     end
   end
 end
