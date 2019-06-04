@@ -2,7 +2,7 @@
   <%= form_tag stocklog_path, method: :get do %>
     <%= text_field_tag 'search[date_from]', @search.date_from %>
     <%= text_field_tag 'seach [date_to]', @search.date_to %>
-    <%= submit_tag 'Aplicar', class'btn search-button' %>
+    <%= submit_tag 'Aplicar' %>
   <% end %>
 <% end %>
 
