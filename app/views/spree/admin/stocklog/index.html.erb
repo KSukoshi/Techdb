@@ -9,6 +9,7 @@
     </colgroup>
     <tbody>
       <% @stockmovelog.each do |movement| %>
+      <% variants.each do |variant| %>
           <tr>
             <td><%= movement.updated_at %></td>
             <td class="align-center"><%= movement.quantity %></td>
@@ -16,6 +17,7 @@
             <td class="align-right"><%= variant.send(display_attribute[:attr_name]) %></td>
             <% end %>
           </tr>
+          <% end %>
       <% end %>
     </tbody>
   </table>
