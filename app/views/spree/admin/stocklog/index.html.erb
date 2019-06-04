@@ -1,4 +1,5 @@
 <% content_for :table_filter do %>
+<%= search_form_for [:admin, @search] do |f| %>
 <div class="date-range-filter field">
   <%= label_tag :q_created_at_gt, t('spree.date_range') %>
   <div class="date-range-fields input-group">
