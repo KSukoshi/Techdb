@@ -18,7 +18,8 @@ module Spree
         params ||= {}
         @date_from = params[:date_from]
         @date_to = params[:date_to]
-
+      end
+      
       def build_resource
         variant = Spree::Variant.accessible_by(current_ability, :read).find(params[:variant_id])
         stock_location = Spree::StockLocation.accessible_by(current_ability, :read).find(params[:stock_location_id])
@@ -62,4 +63,5 @@ module Spree
       end
     end
   end
+end
 end
