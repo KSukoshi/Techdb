@@ -11,6 +11,11 @@
       <% @stockmovelog.each do |movement| %>
       <% @variants.each do |variant| %>
           <tr>
+            <div class='variant-image'>
+              <%= render 'spree/admin/shared/image',
+                image: variant.gallery.images.first,
+                size: :small %>
+            </div>
             <td><%= movement.updated_at %></td>
             <td class="align-center"><%= movement.quantity %></td>
             <% @variant_display_attributes.each do |display_attribute| %>
