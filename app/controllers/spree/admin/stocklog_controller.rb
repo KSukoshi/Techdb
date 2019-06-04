@@ -1,6 +1,7 @@
 module Spree
   module Admin
     class Spree::Admin::StocklogController < Spree::Admin::BaseController
+      attr_reader :date_from, :date_to
       class_attribute :variant_display_attributes
       self.variant_display_attributes = [
         { translation_key: :name, attr_name: :name }
@@ -8,8 +9,9 @@ module Spree
 
 
       before_action :load_movements, :load_stock_management_data
+
       def index
-        
+
       end
       def build_resource
         variant = Spree::Variant.accessible_by(current_ability, :read).find(params[:variant_id])
@@ -36,7 +38,7 @@ module Spree
         @product = Spree::Product.accessible_by(current_ability, :read).friendly.find(params[:product_slug]) if params[:product_slug]
       end
       def load_movements
-        @stockmovelog = Spree::StockMovement.all
+        @stockmovelog = Spree::StockMovement.where('created_at BETWEEN ? AND ?', ":date_from", ":date_to")
       end
       def load_stock_management_data
         @stock_locations = Spree::StockLocation.accessible_by(current_ability, :read)
