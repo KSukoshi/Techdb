@@ -11,8 +11,8 @@ module Spree
       before_action :load_movements, :load_stock_management_data
 
       def index
-        @date_from = params[:date_from].first
-        @date_to = params[:date_to].last
+        @date_from = params[:date_from]
+        @date_to = params[:date_to]
       end
       def build_resource
         variant = Spree::Variant.accessible_by(current_ability, :read).find(params[:variant_id])
