@@ -1,7 +1,7 @@
 <% content_for :table_filter do %>
   <%= form_tag stocklog_path, method: :get do %>
-    <%= text_field_tag 'search[date_from]', @stockmovelog.last %>
-    <%= text_field_tag 'search[date_to]', @stockmovelog.first %>
+    <%= text_field_tag 'search[date_from]', @stockmovelog.date_from %>
+    <%= text_field_tag 'search[date_to]', @stockmovelog.date_to %>
     <%= submit_tag 'Aplicar' %>
   <% end %>
 <% end %>
@@ -36,6 +36,7 @@
   </table>
 <% else %>
   <div class="no-objects-found">
-    Sem resultados
-  </div>
+    <div class="no-objects-found">
+      Sem resultados
+    </div>
 <% end %>
