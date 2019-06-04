@@ -1,17 +1,5 @@
 <% content_for :table_filter do %>
-<div class="date-range-filter field">
-  <div class="date-range-fields input-group">
-    <%= render class: 'datepicker form-control datepicker-from' %>
 
-    <div class="input-group-prepend input-group-append">
-      <span class="input-group-text range-divider">
-        <i class="fa fa-arrow-right"></i>
-      </span>
-    </div>
-
-    <%= render class: 'datepicker form-control datepicker-to' %>
-  </div>
-</div>
 <% end %>
 
 <% if @stockmovelog.any? %>
