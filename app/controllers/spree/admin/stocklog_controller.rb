@@ -11,9 +11,14 @@ module Spree
       before_action :load_movements, :load_stock_management_data
 
       def index
+
+      end
+
+      def initialize(params)
+        params ||= {}
         @date_from = params[:date_from]
         @date_to = params[:date_to]
-      end
+
       def build_resource
         variant = Spree::Variant.accessible_by(current_ability, :read).find(params[:variant_id])
         stock_location = Spree::StockLocation.accessible_by(current_ability, :read).find(params[:stock_location_id])
