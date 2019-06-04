@@ -1,3 +1,20 @@
+<% content_for :table_filter do %>
+<div class="date-range-filter field">
+  <%= label_tag :q_created_at_gt, t('spree.date_range') %>
+  <div class="date-range-fields input-group">
+    <%= f.text_field :created_at_gt, class: 'datepicker form-control datepicker-from', value: params[:q][:created_at_gt], placeholder: t('spree.start') %>
+
+    <div class="input-group-prepend input-group-append">
+      <span class="input-group-text range-divider">
+        <i class="fa fa-arrow-right"></i>
+      </span>
+    </div>
+
+    <%= f.text_field :created_at_lt, class: 'datepicker form-control datepicker-to', value: params[:q][:created_at_lt], placeholder: t('spree.stop') %>
+  </div>
+</div>
+<% end %>
+
 <% if @stockmovelog.any? %>
   <table class="index" id="listing_products">
     <colgroup>
