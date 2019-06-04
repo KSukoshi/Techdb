@@ -3,7 +3,6 @@ module Spree
     class Spree::Admin::StocklogController < Spree::Admin::BaseController
       class_attribute :variant_display_attributes
       self.variant_display_attributes = [
-        { translation_key: :sku, attr_name: :sku },
         { translation_key: :name, attr_name: :name }
       ]
 
