@@ -37,7 +37,7 @@ module Spree
         @search = Spree::StockMovement.accessible_by(current_ability, :index).ransack(params[:q])
         @orders = @search.result.includes([:user]).
           page(params[:page]).
-          per(params[:per_page] || Spree::Config[:orders_per_page])
+          per(params[:per_page]
 
         # Restore dates
         params[:q][:created_at_gt] = created_at_gt
