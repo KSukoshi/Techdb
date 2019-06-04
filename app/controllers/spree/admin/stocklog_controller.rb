@@ -6,7 +6,7 @@ module Spree
         { translation_key: :sku, attr_name: :sku },
         { translation_key: :name, attr_name: :name }
       ]
-      update.before :determine_backorderable
+
       before_action :load_movements, :load_stock_management_data
       def index
       end
