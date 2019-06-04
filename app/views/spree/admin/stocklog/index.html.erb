@@ -12,7 +12,9 @@
           <tr>
             <td><%= movement.updated_at %></td>
             <td class="align-center"><%= movement.quantity %></td>
-            <td class="align-right"><%=  %></td>
+            <% @variant_display_attributes.each do |display_attribute| %>
+            <td class="align-right"><%= variant.send(display_attribute[:attr_name]) %></td>
+            <% end %>
           </tr>
       <% end %>
     </tbody>
