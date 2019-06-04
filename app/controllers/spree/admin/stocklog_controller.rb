@@ -9,39 +9,7 @@ module Spree
 
       before_action :load_movements, :load_stock_management_data
       def index
-        query_present = params[:q]
-        created_at_gt = params[:q][:created_at_gt]
-        created_at_lt = params[:q][:created_at_lt]
-
-        if params[:q][:created_at_gt].present?
-          params[:q][:created_at_gt] = begin
-                                         Time.zone.parse(params[:q][:created_at_gt]).beginning_of_day
-                                       rescue StandardError
-                                         ""
-                                       end
-        end
-
-        if params[:q][:created_at_lt].present?
-          params[:q][:created_at_lt] = begin
-                                         Time.zone.parse(params[:q][:created_at_lt]).end_of_day
-                                       rescue StandardError
-                                         ""
-                                       end
-        end
-
-        if @show_only_completed
-          params[:q][:completed_at_gt] = params[:q].delete(:created_at_gt)
-          params[:q][:completed_at_lt] = params[:q].delete(:created_at_lt)
-        end
-
-        @search = Spree::StockMovement.accessible_by(current_ability, :index).ransack(params[:q])
-        @orders = @search.result.includes([:user]).
-          page(params[:page]).
-          per(params[:per_page])
-
-        # Restore dates
-        params[:q][:created_at_gt] = created_at_gt
-        params[:q][:created_at_lt] = created_at_lt
+        
       end
       def build_resource
         variant = Spree::Variant.accessible_by(current_ability, :read).find(params[:variant_id])
