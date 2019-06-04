@@ -11,7 +11,8 @@ module Spree
       before_action :load_movements, :load_stock_management_data
 
       def index
-
+        @date_from = params[:date_from].first
+        @date_to = params[:date_to].last
       end
       def build_resource
         variant = Spree::Variant.accessible_by(current_ability, :read).find(params[:variant_id])
@@ -38,7 +39,7 @@ module Spree
         @product = Spree::Product.accessible_by(current_ability, :read).friendly.find(params[:product_slug]) if params[:product_slug]
       end
       def load_movements
-        @stockmovelog = Spree::StockMovement.where('created_at BETWEEN ? AND ?', ":date_from", ":date_to")
+        @stockmovelog = Spree::StockMovement.where('created_at BETWEEN ? AND ?', @date_from, @date_to)
       end
       def load_stock_management_data
         @stock_locations = Spree::StockLocation.accessible_by(current_ability, :read)

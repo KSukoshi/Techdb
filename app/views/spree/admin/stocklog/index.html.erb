@@ -1,7 +1,7 @@
 <% content_for :table_filter do %>
   <%= form_tag stocklog_path, method: :get do %>
-    <%= text_field_tag 'search[2019-05-07]', @stockmovelog.date_from %>
-    <%= text_field_tag 'search[2019-05-09]', @stockmovelog.date_to %>
+    <%= text_field_tag 'search[date_from]', @stockmovelog.date_from %>
+    <%= text_field_tag 'search[date_to]', @stockmovelog.date_to %>
     <%= submit_tag 'Aplicar' %>
   <% end %>
 <% end %>
