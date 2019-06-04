@@ -10,9 +10,9 @@
     <tbody>
       <% @stockmovelog.each do |movement| %>
           <tr>
-            <td><%= movement.quantity %></td>
-            <td class="align-center"><%= movement.updated_at %></td>
-            <td class="align-right"></td>
+            <td><%= movement.updated_at %></td>
+            <td class="align-center"><%= movement.quantity %></td>
+            <td class="align-right"><%=  %></td>
           </tr>
       <% end %>
     </tbody>
