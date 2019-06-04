@@ -9,6 +9,13 @@ module Spree
 
       before_action :load_movements, :load_stock_management_data
       def index
+        query_present = params[:q]
+        params[:q] ||= {}
+        params[:q][:completed_at_not_null] ||= '1' if Spree::Config[:show_only_complete_orders_by_default]
+        @show_only_completed = params[:q][:completed_at_not_null] == '1'
+        params[:q][:s] ||= @show_only_completed ? 'completed_at desc' : 'created_at desc'
+        params[:q][:completed_at_not_null] = '' unless @show_only_completed
+        
         created_at_gt = params[:q][:created_at_gt]
         created_at_lt = params[:q][:created_at_lt]
 
