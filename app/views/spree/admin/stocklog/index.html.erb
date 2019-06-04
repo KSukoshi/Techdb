@@ -17,7 +17,9 @@
             <td class="align-right"><%= variant.send(display_attribute[:attr_name]) %></td>
             <% end %>
             <td class='variant-image' style="height: 34px;">
-              <%= render 'spree/admin/shared/image', image: product.gallery.images.first, size: :mini %>
+              <%= render 'spree/admin/shared/image',
+                image: variant.gallery.images.first,
+                size: :mini %>
             </td>
           </tr>
           <% end %>
