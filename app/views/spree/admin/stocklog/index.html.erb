@@ -1,7 +1,3 @@
-<% content_for :table_filter do %>
-
-<% end %>
-
 <% if @stockmovelog.any? %>
   <table class="index" id="listing_products">
     <colgroup>
@@ -12,6 +8,7 @@
        <col style="width: 15%;">
     </colgroup>
     <tbody>
+      <%= paginate @stockmovelog, theme: "solidus_admin" %>
       <% @stockmovelog.each do |movement| %>
       <% @variants.each do |variant| %>
           <tr>
@@ -28,6 +25,7 @@
           </tr>
           <% end %>
       <% end %>
+      <%= paginate @stockmovelog, theme: "solidus_admin" %>
     </tbody>
   </table>
 <% else %>
