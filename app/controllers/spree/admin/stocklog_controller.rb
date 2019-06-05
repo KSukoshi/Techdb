@@ -11,6 +11,8 @@ module Spree
       before_action :load_movements, :load_stock_management_data
 
       def index
+        @search = initialize.new(params[:search])
+        @datelog = @search.@stockmovelog
 
       end
 
