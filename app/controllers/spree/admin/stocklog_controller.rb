@@ -12,7 +12,7 @@ module Spree
 
       def index
         @search = initialize.new(params[:search])
-        @datelog = @search.@stockmovelog
+        @datelog = @search.load_movements
 
       end
 
