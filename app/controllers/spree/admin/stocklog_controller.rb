@@ -14,7 +14,7 @@ module Spree
 
       end
 
-      def initialize(params)
+      def initialize
         params ||= {}
         @date_from = params[:date_from]
         @date_to = params[:date_to]
