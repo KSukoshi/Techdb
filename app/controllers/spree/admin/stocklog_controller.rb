@@ -6,8 +6,7 @@ module Spree
       self.variant_display_attributes = [
         { translation_key: :name, attr_name: :name }
       ]
-
-
+      
       before_action :load_movements, :load_stock_management_data
 
       def index
