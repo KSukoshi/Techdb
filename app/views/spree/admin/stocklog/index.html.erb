@@ -1,3 +1,8 @@
+<% content_for :page_actions do %>
+  <li>
+    <%= link_to t("Controle de estoque"), stock_items_url, class: 'btn btn-primary' %>
+  </li>
+<% end %>
 <% if @stockmovelog.any? %>
   <table class="index" id="listing_products">
     <colgroup>
