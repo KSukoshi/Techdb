@@ -301,6 +301,9 @@ pt-BR:
         user: Usuário
       spree/stock_item:
         count_on_hand: Contagem em Mãos
+        stock_movement: Histórico de movimento
+      spree/stocklog:
+        stock_item_back: Controle de estoque
       spree/stock_location:
         active: Ativo
         address1: Endereço
