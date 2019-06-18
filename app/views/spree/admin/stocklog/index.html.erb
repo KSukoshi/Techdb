@@ -3,6 +3,9 @@
     <%= link_to t('spree.stock_movement_back'), admin_stock_items_url, class: 'btn btn-primary' %>
   </li>
 <% end %>
+
+  <% admin_breadcrumb(t('spree.stock')) %>
+
 <% if @stockmovelog.any? %>
   <table class="index" id="listing_products">
     <colgroup>
