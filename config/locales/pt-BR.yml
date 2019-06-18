@@ -2193,6 +2193,9 @@ pt-BR:
     variant_search_placeholder: Nome da Variante
     variant_to_add: Variantes para adicionar
     variant_to_be_received: Variantes para receber
+    clear_key: Limpar API key
+    regenerate_key: Recriar API key
+    generate_key: Criar API key
     variants: Variantes
     version: Versão
     void: Estornar
