@@ -2196,7 +2196,7 @@ pt-BR:
     clear_key: Limpar API key
     regenerate_key: Recriar API key
     generate_key: Criar API key
-    modify_stock_count: Modificar quantidade no estoque
+    modify_stock_count: Modificar quantidade
     variants: Variantes
     version: Versão
     void: Estornar
