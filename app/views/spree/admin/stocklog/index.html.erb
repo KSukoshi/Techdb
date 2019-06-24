@@ -17,11 +17,12 @@
     </colgroup>
     <tbody>
       <% @stockmovelog.each do |movement| %>
+      <% @variants.find_each do |variant| %>
           <tr>
             <td><%= movement.updated_at %></td>
             <td class="align-center"><%= movement.quantity %></td>
             <% @variant_display_attributes.each do |display_attribute| %>
-            <td class="align-right"><%= @variant.send(display_attribute[:attr_name]) %></td>
+            <td class="align-right"><%= variant.send(display_attribute[:attr_name]) %></td>
             <% end %>
             <td class='variant-image' style="height: 34px;">
               <%= render 'spree/admin/shared/image',
@@ -30,6 +31,7 @@
             </td>
           </tr>
           <% end %>
+      <% end %>
     </tbody>
   </table>
 <% else %>
