@@ -17,7 +17,6 @@
     </colgroup>
     <tbody>
       <% @stockmovelog.each do |movement| %>
-      <% @variants.@stockmovelog do |variant| %>
           <tr>
             <td><%= movement.updated_at %></td>
             <td class="align-center"><%= movement.quantity %></td>
@@ -31,7 +30,6 @@
             </td>
           </tr>
           <% end %>
-      <% end %>
     </tbody>
   </table>
 <% else %>
