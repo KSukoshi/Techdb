@@ -16,7 +16,7 @@
        <col style="width: 15%;">
     </colgroup>
     <tbody>
-      <% @stockmovelog.each do |movement| %>
+      <% @stock_items.each do |movement| %>
           <tr>
           <% @variants.each do |variant| %>
             <td><%= movement.updated_at %></td>

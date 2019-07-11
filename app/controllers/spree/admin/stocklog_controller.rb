@@ -6,7 +6,7 @@ module Spree
       self.variant_display_attributes = [
         { translation_key: :name, attr_name: :name }
       ]
-      
+
       before_action :load_movements, :load_stock_management_data
 
       def index
@@ -37,6 +37,7 @@ module Spree
         @product = Spree::Product.accessible_by(current_ability, :read).friendly.find(params[:product_slug]) if params[:product_slug]
       end
       def load_movements
+        @stock_items = Spree::StockMovement.where(["stock_item_id"])
         @stockmovelog = Spree::StockMovement.all
       end
       def load_stock_management_data
