@@ -1,78 +1,199 @@
-<section id="landpage" class="landpage">
+<section id="landpage" class="b1">
   <div id="header-bar" class="header-bar"></div>
-<div id="header" class="header" datahook>
+<div id="header" class="header">
   <div class="logo-holder animated slideInDown">
-    <img src="assets/images/tecnologo.png" width="250px" height="auto">
+    <a href="https://www.tecnomult.com"><img src="{{ asset('img/tecnologo.png') }}" width="250px" height="auto"></a>
+  </div>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="mobile-holder">
+  <div class="dropdown">
+    <a href="https://www.tecnomult.com/computadores" class="dropbtn"><span class="orange-plus">+</span> COMPUTADOR</a>
+  </div>
+  <div class="dropdown">
+    <a href="https://www.tecnomult.com/monitor" class="dropbtn"><span class="orange-plus">+</span> MONITOR</a>
+    <div class="dropdown-content animated fadeIn">
+      <a href="https://www.tecnomult.com/monitor?loja=657632&palavra_busca=&filtrar_marca=ACER&order=3&categoria=31">ACER</a>
+      <a href="https://www.tecnomult.com/monitor?loja=657632&palavra_busca=&filtrar_marca=ASUS&order=3&categoria=31">ASUS</a>
+      <a href="https://www.tecnomult.com/monitor?loja=657632&palavra_busca=&filtrar_marca=PHILIPS&order=3&categoria=31">PHILIPS</a>
+      <a href="https://www.tecnomult.com/monitor?loja=657632&palavra_busca=&filtrar_marca=SAMSUNG&order=3&categoria=31">SAMSUNG</a>
+      <a href="https://www.tecnomult.com/monitor?loja=657632&palavra_busca=&filtrar_marca=ZOWIE&order=3&categoria=31">ZOWIE</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="https://www.tecnomult.com/headset" class="dropbtn"><span class="orange-plus">+</span> HEADSET</a>
+    <div class="dropdown-content animated fadeIn">
+      <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=ASTRO&order=3&categoria=25">ASTRO</a>
+      <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=CORSAIR&order=3&categoria=25">CORSAIR</a>
+      <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=ELEMENT+G&order=3&categoria=25">ELEMENT G</a>
+      <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=HYPER+X&order=3&categoria=25">HYPERX</a>
+      <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=LOGITECH&order=3&categoria=25">LOGITECH</a>
+      <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=MOTOSPEED&order=3&categoria=25">MOTOSPEED</a>
+      <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=RAZER&order=3&categoria=25">RAZER</a>
+      <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=REDRAGON&order=3&categoria=25">REDRAGON</a>
+      <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=STEELSERIES&order=3&categoria=25">STEELSERIES</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="https://www.tecnomult.com/mouse" class="dropbtn"><span class="orange-plus">+</span> MOUSE</a>
+    <div class="dropdown-content animated fadeIn">
+      <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=CORSAIR&order=3&categoria=45">CORSAIR</a>
+      <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=HYPERX&order=3&categoria=45">HYPER X</a>
+      <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=LOGITECH&order=3&categoria=45">LOGITECH</a>
+      <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=MOTOSPEED&order=3&categoria=45">MOTOSPEED</a>
+      <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=RAZER&order=3&categoria=45">RAZER</a>
+      <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=REDRAGON&order=3&categoria=45">REDRAGON</a>
+      <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=STEELSERIES&order=3&categoria=45">STEELSERIES</a>
+      <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=ZOWIE&order=3&categoria=45">ZOWIE</a>
+
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="https://www.tecnomult.com/teclado" class="dropbtn"><span class="orange-plus">+</span> TECLADO</a>
+    <div class="dropdown-content animated fadeIn">
+      <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=CORSAIR&order=3&categoria=47">CORSAIR</a>
+      <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=HYPER+X&order=3&categoria=47">HYPERX</a>
+      <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=LOGITECH&order=3&categoria=47">LOGITECH</a>
+      <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=MOTOSPEED&order=3&categoria=47">MOTOSPEED</a>
+      <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=OEX+GAME&order=3&categoria=47">OEX GAME</a>
+      <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=RAZER&order=3&categoria=47">RAZER</a>
+      <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=REDRAGON&order=3&categoria=47">REDRAGON</a>
+      <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=ROCCAT&order=3&categoria=47">ROCCAT</a>
+      <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=STEELSERIES&order=3&categoria=47">STEELSERIES</a>
+      <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=THERMALTAKE&order=3&categoria=47">THERMALTAKE</a>
+    </div>
+
+  </div>
+  <div class="dropdown">
+    <a href="https://www.tecnomult.com/cadeira" class="dropbtn"><span class="orange-plus">+</span> CADEIRA</a>
+    <div class="dropdown-content animated fadeIn">
+      <a href="https://www.tecnomult.com/cadeira?loja=657632&palavra_busca=&filtrar_marca=RAIDMAX&order=3&categoria=79">RAIDMAX</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="https://www.tecnomult.com/placasdevideo" class="dropbtn"><span class="orange-plus">+</span> PLACA DE VÍDEO</a>
+  </div>
+  <div class="dropdown">
+    <a href="#" class="dropbtn"><span class="orange-plus">+</span> OUTRAS</a>
+    <div class="dropdown-content animated fadeIn">
+      <a href="https://www.tecnomult.com/webcam">WEBCAM</a>
+      <a href="https://www.tecnomult.com/cooler">COOLER</a>
+      <a href="https://www.tecnomult.com/memo-r-i-a">MEMÓRIA</a>
+      <a href="https://www.tecnomult.com/fonte">FONTE</a>
+      <a href="https://www.tecnomult.com/hd">HD</a>
+      <a href="https://www.tecnomult.com/gabinete">GABINETE</a>
+      <a href="https://www.tecnomult.com/placamae">PLACA MÃE</a>
+      <a href="https://www.tecnomult.com/mousepad">MOUSEPAD</a>
+    </div>
+  </div>
+  </div>
   </div>
   <div class="menu-holder animated slideInDown">
     <div class="dropdown">
-      <button class="dropbtn"><span class="orange-plus">+</span> HEADSET</button>
+      <a href="https://www.tecnomult.com/computadores" class="dropbtn"><span class="orange-plus">+</span> COMPUTADOR</a>
+    </div>
+    <div class="dropdown">
+      <a href="https://www.tecnomult.com/monitor" class="dropbtn"><span class="orange-plus">+</span> MONITOR</a>
       <div class="dropdown-content animated fadeIn">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="https://www.tecnomult.com/monitor?loja=657632&palavra_busca=&filtrar_marca=ACER&order=3&categoria=31">ACER</a>
+        <a href="https://www.tecnomult.com/monitor?loja=657632&palavra_busca=&filtrar_marca=ASUS&order=3&categoria=31">ASUS</a>
+        <a href="https://www.tecnomult.com/monitor?loja=657632&palavra_busca=&filtrar_marca=PHILIPS&order=3&categoria=31">PHILIPS</a>
+        <a href="https://www.tecnomult.com/monitor?loja=657632&palavra_busca=&filtrar_marca=SAMSUNG&order=3&categoria=31">SAMSUNG</a>
+        <a href="https://www.tecnomult.com/monitor?loja=657632&palavra_busca=&filtrar_marca=ZOWIE&order=3&categoria=31">ZOWIE</a>
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn"><span class="orange-plus">+</span> TECLADO</button>
+      <a href="https://www.tecnomult.com/headset" class="dropbtn"><span class="orange-plus">+</span> HEADSET</a>
       <div class="dropdown-content animated fadeIn">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=ASTRO&order=3&categoria=25">ASTRO</a>
+        <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=CORSAIR&order=3&categoria=25">CORSAIR</a>
+        <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=ELEMENT+G&order=3&categoria=25">ELEMENT G</a>
+        <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=HYPER+X&order=3&categoria=25">HYPERX</a>
+        <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=LOGITECH&order=3&categoria=25">LOGITECH</a>
+        <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=MOTOSPEED&order=3&categoria=25">MOTOSPEED</a>
+        <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=RAZER&order=3&categoria=25">RAZER</a>
+        <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=REDRAGON&order=3&categoria=25">REDRAGON</a>
+        <a href="https://www.tecnomult.com/headset?loja=657632&palavra_busca=&filtrar_marca=STEELSERIES&order=3&categoria=25">STEELSERIES</a>
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn"><span class="orange-plus">+</span> MOUSE</button>
+      <a href="https://www.tecnomult.com/mouse" class="dropbtn"><span class="orange-plus">+</span> MOUSE</a>
       <div class="dropdown-content animated fadeIn">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=CORSAIR&order=3&categoria=45">CORSAIR</a>
+        <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=HYPERX&order=3&categoria=45">HYPER X</a>
+        <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=LOGITECH&order=3&categoria=45">LOGITECH</a>
+        <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=MOTOSPEED&order=3&categoria=45">MOTOSPEED</a>
+        <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=RAZER&order=3&categoria=45">RAZER</a>
+        <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=REDRAGON&order=3&categoria=45">REDRAGON</a>
+        <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=STEELSERIES&order=3&categoria=45">STEELSERIES</a>
+        <a href="https://www.tecnomult.com/mouse?loja=657632&palavra_busca=&filtrar_marca=ZOWIE&order=3&categoria=45">ZOWIE</a>
+
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn"><span class="orange-plus">+</span> MONITOR</button>
+      <a href="https://www.tecnomult.com/teclado" class="dropbtn"><span class="orange-plus">+</span> TECLADO</a>
       <div class="dropdown-content animated fadeIn">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=CORSAIR&order=3&categoria=47">CORSAIR</a>
+        <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=HYPER+X&order=3&categoria=47">HYPERX</a>
+        <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=LOGITECH&order=3&categoria=47">LOGITECH</a>
+        <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=MOTOSPEED&order=3&categoria=47">MOTOSPEED</a>
+        <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=OEX+GAME&order=3&categoria=47">OEX GAME</a>
+        <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=RAZER&order=3&categoria=47">RAZER</a>
+        <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=REDRAGON&order=3&categoria=47">REDRAGON</a>
+        <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=ROCCAT&order=3&categoria=47">ROCCAT</a>
+        <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=STEELSERIES&order=3&categoria=47">STEELSERIES</a>
+        <a href="https://www.tecnomult.com/teclado?loja=657632&palavra_busca=&filtrar_marca=THERMALTAKE&order=3&categoria=47">THERMALTAKE</a>
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn"><span class="orange-plus">+</span> CADEIRA</button>
+      <a href="https://www.tecnomult.com/cadeira" class="dropbtn"><span class="orange-plus">+</span> CADEIRA</a>
       <div class="dropdown-content animated fadeIn">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="https://www.tecnomult.com/cadeira?loja=657632&palavra_busca=&filtrar_marca=RAIDMAX&order=3&categoria=79">RAIDMAX</a>
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn"><span class="orange-plus">+</span> MOUSEPAD</button>
-      <div class="dropdown-content animated fadeIn">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
+      <a href="https://www.tecnomult.com/placasdevideo" class="dropbtn"><span class="orange-plus">+</span> PLACA DE VÍDEO</a>
     </div>
     <div class="dropdown">
-      <button class="dropbtn"><span class="orange-plus">+</span> PLACA DE VÍDEO</button>
+      <button class="dropbtn"><span class="orange-plus">+</span> OUTRAS</button>
       <div class="dropdown-content animated fadeIn">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="https://www.tecnomult.com/webcam">WEBCAM</a>
+        <a href="https://www.tecnomult.com/cooler">COOLER</a>
+        <a href="https://www.tecnomult.com/memo-r-i-a">MEMÓRIA</a>
+        <a href="https://www.tecnomult.com/fonte">FONTE</a>
+        <a href="https://www.tecnomult.com/hd">HD</a>
+        <a href="https://www.tecnomult.com/gabinete">GABINETE</a>
+        <a href="https://www.tecnomult.com/placamae">PLACA MÃE</a>
+        <a href="https://www.tecnomult.com/mousepad">MOUSEPAD</a>
       </div>
     </div>
   </div>
-  <div class="mobile-menu animated rotateIn"><span class="fas fa-bars"></span></div>
+  <div class="mobile-menu animated rotateIn"><span onclick="openNav()" class="fas fa-bars"></span></div>
   </div>
   <div class="side-bar-holder">
 <div class="search-bar-side">
-<div class="icon-adjust"><i class="fas fa-search"></i></div>
+  {% element 'snippets/search-main' %}
+<div class="icon-adjust icon-add"><i class="fas fa-search"></i></div>
 </div>
-<div class="search-bar-side2">
-<div class="icon-adjust"><i class="fas fa-user"></i></div>
+<div class="search-bar-side2 my-account-login">
+  <span class="tray-hide" data-logged-user="true">CONTA</span>
+  {% element 'snippets/customer-front' %}
+<div class="icon-adjust">
+  <i class="tray-hide fas fa-user" data-logged-user="false"></i>
+  <a href="{{ links.orders }}"><i class="tray-hide fas fa-user" data-logged-user="true" style="color: white;"></i></a></div>
 </div>
 <div class="search-bar-side3">
-<div class="icon-adjust"><i class="fas fa-shopping-cart"></i></div>
+  {% element 'snippets/cart-front' %}
+<div class="icon-adjust icon-add"><i class="fas fa-shopping-cart"></i></div>
 </div>
   </div>
 </section>
+<script>
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
