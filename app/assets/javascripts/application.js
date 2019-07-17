@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require spree/frontend/landpage
+//= require spree/frontend/sidenav
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
