@@ -39,9 +39,45 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  background-image: url("../images/city-background.jpg");
+  background-image: url("/city-background.jpg");
   overflow: none;
 }
+
+.b1 {
+  width: 100%;
+  height: 860px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url("/city-background.jpg");
+  overflow: none;
+  transition: 1000ms;
+ }
+
+ .b2 {
+   width: 100%;
+   height: 860px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
+   overflow: none;
+   background-image: url("/motospeed-back0.jpg");
+   transition: 1000ms;
+  }
+
+  .b3 {
+    width: 100%;
+    height: 860px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: none;
+    background-image: url("/lightring2.jpg");
+    transition: 1000ms;
+   }
 
 .header{
   display: flex;
