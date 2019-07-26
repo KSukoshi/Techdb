@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Nova+Square&display=swap');
-@media screen and (max-width: 570px){
+@media screen and (max-width: 1180px){
   .menu-holder{
     display: none;
   }
@@ -24,6 +24,69 @@
   }
 }
 
+@media screen and (max-width: 767px){
+  .products-item-each{
+    width: auto !important;
+  }
+}
+
+@media screen and (max-width: 1096px){
+  .products-item-each{
+    margin-left: 0px !important;
+  }
+}
+
+@media screen and (max-width: 1611px){
+  .product-big-tall2{
+    display: none !important;
+  }
+
+  .product-big-tall{
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1289px){
+  .product-middle{
+    display: none !important;
+  }
+
+}
+
+@media screen and (max-width: 1406px){
+  .products-item-each{
+    width: 22% !important;
+    margin-left: 28px !important;
+  }
+}
+
+@media screen and (max-width: 1137px){
+  .products-item-each{
+    width: 25% !important;
+    margin-left: 0px !important;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .products-item-each{
+    width: auto !important;
+    margin-left: 0px !important;
+  }
+}
+
+@media screen and (min-width: 1611px){
+.product-small3{
+  display: none !important;
+}
+.product-small4{
+  display: none !important;
+}
+}
+@media screen and (max-width: 1368px){
+  .dropbtn{
+    font-size: 11px !important;
+  }
+}
 
 body{
   overflow: overlay;
@@ -400,14 +463,9 @@ body{
   flex-direction: row;
   flex-wrap: wrap;
 }
-
-.product-small{
-  height: 220px;
-  width: 300px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: #000000;
-  background-image: url('../images/corsback.jpg');
+.product-small:hover{
+    background-image: url('../img/corsbackhover.jpg');
+    transition: 1s;
 }
 
 .product-small2{
@@ -416,7 +474,49 @@ body{
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: #000000;
-  background-image: url('../images/roccback.jpg');
+  background-image: url('../img/roccback.jpg');
+  transition: 1s;
+}
+
+.product-small2:hover{
+    transition: 1s;
+    background-image: url('../img/roccbackhover.jpg');
+}
+
+.product-small3{
+  height: 220px;
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: #000000;
+  background-image: url('../img/logiback.jpg');
+  background-position: top;
+  transition: 1s;
+}
+
+.product-small3:hover{
+    transition: 1s;
+    background-position: right;
+    background-image: url('../img/logibackhover.jpg');
+}
+
+.product-small4{
+  height: 220px;
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: #000000;
+  background-position: top;
+  background-image: url('../img/motoback.jpg');
+  transition: 1s;
+}
+
+.product-small4:hover{
+    transition: 1s;
+    background-position: right;
+    background-image: url('../img/motobackhover.jpg');
 }
 
 .product-big-wide{
