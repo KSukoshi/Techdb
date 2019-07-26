@@ -1,4 +1,5 @@
-<section id="landpage" class="b1">
+<% unless current_page?(root_path) %>
+  <section id="landpage" class="b1">
   <div id="header-bar" class="header-bar"></div>
 <div id="header" class="header">
   <div class="logo-holder animated slideInDown">
@@ -113,3 +114,6 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 </script>
+<% else %>
+PENES
+<% end %>
