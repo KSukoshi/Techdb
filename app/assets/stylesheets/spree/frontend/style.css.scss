@@ -87,9 +87,7 @@
     font-size: 11px !important;
   }
 }
-
 body{
-  overflow: overlay;
   overflow-x: hidden;
   background: #000000;
 }
@@ -103,8 +101,9 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  background-image: url("/city-background.jpg");
   overflow: none;
+  background-image: url("/city-background.jpg");
+  transition: 1000ms;
 }
 
 .b1 {
@@ -143,6 +142,16 @@ body{
     transition: 1000ms;
    }
 
+.landnopage{
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: url("/city-background.jpg");
+  overflow: none;
+}
+
 .header{
   display: flex;
   flex-direction: row;
@@ -164,6 +173,7 @@ body{
   user-select: none;
   margin: auto;
   margin-bottom: 20px;
+  z-index: 1000;
 }
 
 .btn-register{
@@ -359,7 +369,7 @@ body{
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  background: #ffffff;
+  background: #0c0c0c;
   width: 100%;
   transition-duration: 1s;
 }
@@ -387,11 +397,22 @@ body{
 }
 
 .dropbtn {
-  background-color: #ffffff00;
+  background-color: rgba(0, 0, 0, 0);
   color: white;
   font-family: 'Nova Square';
   font-weight: bold;
-  padding: 16px;
+  padding: 13px;
+  font-size: 16px;
+  border: none;
+  text-decoration: none;
+}
+
+.dropbtn:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-family: 'Nova Square';
+  font-weight: bold;
+  padding: 13px;
   font-size: 16px;
   border: none;
   text-decoration: none;
@@ -414,8 +435,6 @@ body{
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  font-size: 10px;
-  font-family: 'Nova Square';
 }
 
 .dropdown-content a {
@@ -463,8 +482,19 @@ body{
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.product-small{
+  height: 220px;
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #000000;
+  background-image: url('/corsback.jpg');
+  transition: 1s;
+}
+
 .product-small:hover{
-    background-image: url('../img/corsbackhover.jpg');
+    background-image: url('/corsbackhover.jpg');
     transition: 1s;
 }
 
@@ -474,13 +504,13 @@ body{
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: #000000;
-  background-image: url('../img/roccback.jpg');
+  background-image: url('/roccback.jpg');
   transition: 1s;
 }
 
 .product-small2:hover{
     transition: 1s;
-    background-image: url('../img/roccbackhover.jpg');
+    background-image: url('/roccbackhover.jpg');
 }
 
 .product-small3{
@@ -490,7 +520,7 @@ body{
   margin-left: 10px;
   margin-bottom: 10px;
   background-color: #000000;
-  background-image: url('../img/logiback.jpg');
+  background-image: url('/logiback.jpg');
   background-position: top;
   transition: 1s;
 }
@@ -498,7 +528,7 @@ body{
 .product-small3:hover{
     transition: 1s;
     background-position: right;
-    background-image: url('../img/logibackhover.jpg');
+    background-image: url('/logibackhover.jpg');
 }
 
 .product-small4{
@@ -509,14 +539,14 @@ body{
   margin-bottom: 10px;
   background-color: #000000;
   background-position: top;
-  background-image: url('../img/motoback.jpg');
+  background-image: url('/motoback.jpg');
   transition: 1s;
 }
 
 .product-small4:hover{
     transition: 1s;
     background-position: right;
-    background-image: url('../img/motobackhover.jpg');
+    background-image: url('/motobackhover.jpg');
 }
 
 .product-big-wide{
@@ -524,16 +554,14 @@ body{
   width: 650px;
   margin-top: 10px;
   margin-left: 10px;
-  background: rgba(0,0,0,0) url('../images/hyperxback.jpg');
-  transition: background-color 1s;
+  background-color: #000000;
+  background-image: url('/hyperxback.jpg');
+  transition: 1s;
 }
 
 .product-big-wide:hover{
-  background-color: rgba(0,0,0,.5);
-}
-
-.product-big-wide:before{
-   background-color: inherit;
+  background-image: url('hyperxbackhover.jpg');
+  transition: 1s;
 }
 
 .product-big-tall{
@@ -542,7 +570,30 @@ body{
   margin-top: 10px;
   margin-left: 10px;
   background-color: #000000;
-  background-image: url('../images/logiback.jpg');
+  background-image: url('/logiback.jpg');
+  transition: 1s;
+}
+
+.product-big-tall:hover{
+  background-image: url('/logibackhover.jpg');
+  transition: 1s;
+
+}
+
+.product-big-tall2{
+  height: 450px;
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: #000000;
+  background-image: url('/motoback.jpg');
+  transition: 1s;
+}
+
+.product-big-tall2:hover{
+  background-image: url('/motobackhover.jpg');
+  transition: 1s;
+
 }
 
 .header-fixed{
@@ -552,13 +603,15 @@ body{
   flex-wrap: nowrap;
   height: 120px;
   width: 100.8%;
+  z-index: 100;
 }
 .header-bar{
   position: fixed;
   display: none;
   height: 120px;
-  width: 100%;
-  background-color: #0a0a0a63;
+  width: 102%;
+  background-color: #0a0a0a;
+  z-index: 100;
 }
 
 .title-holder{
@@ -605,39 +658,116 @@ body{
   margin-bottom: 10px;
 }
 
+.tall-title2{
+  color: white;
+  font-family: 'Nova Square';
+  font-size: 38px;
+  margin-right: 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .btn-holder2{
-  margin-top: 250px;
-  margin-left: 15px;
+  margin-top: 288px;
+  margin-left: 9px;
 }
 
 .btn-holder3{
   float: right;
-  margin-top: 105px;
+  margin-top: 126px;
   margin-right: 10px;
 }
 .btn-holder4{
   float: left;
-  margin-top: 74px;
+  margin-top: 101px;
   margin-left: 30px;
 
 }
 
+.btn-holder5{
+  margin-top: 330px;
+  margin-left: 9px;
+}
+
 .product-list-title{
   width: 100%;
-  height: 100px;
-  background-image: url('../images/gamingwallpaper.jpg');
-  background-attachment: fixed;
+  height: 162px;
+  background-image: url('/gamingwallpaper.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .product-big-titles{
   position: relative;
-  top: 35px;
+  top: 61px;
   color: white;
   text-align: center;
   font-family: 'Nova Square';
   font-size: 30px;
+}
+
+.darken{
+  background-color: #eaeaea;
+}
+
+.products-item-each{
+  width: 18%;
+  margin-left: 81px;
+}
+
+.product-comprar{
+  width: 100px;
+  height: 40px;
+  background-color: #ff4e03;
+  float: right;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.product-comprar > span{
+  position: relative;
+  top: 12px;
+  color: white;
+  margin: auto;
+}
+
+.product-price-button{
+  background-color: #cdcdcd;
+  height: 35px;
+  width: 44%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.downer{
+  position: relative;
+  top: 7px;
+}
+
+.product-soldout{
+  background-color: #f18989;
+  color: white;
+  height: 30px;
+  width: 44%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  margin-left: 28%;
+}
+
+.product-right{
+  margin-right: 10px;
+}
+
+.login-holder{
+  width: 255px;
 }
 
 .side-bar-holder{
@@ -648,6 +778,8 @@ body{
   float: left;
   top: 30%;
   transition: 1000ms;
+  z-index: 1000;
+  width: 62px;
 }
 
 .search-bar-side{
@@ -705,7 +837,118 @@ body{
 }
 
 .icon-adjust{
+  position: absolute;
   margin: auto;
-  margin-left: 500px;
   font-size: 30px;
+  left: 500px;
+  top: 16px;
+}
+
+.icon-add {
+  left: 496px !important;
+  top: 22px !important;
+}
+
+.search{
+  width: 413px;
+  margin-top: 9px;
+  margin-left: 35px;
+}
+
+.cart-info-front{
+  background-color: #333 !important;
+  border: none !important;
+  width: 220px;
+  margin-left: 265px;
+  margin-top: 10px;
+  color: white;
+}
+
+.costumer-front{
+  color: white !important;
+  width: 314px;
+  margin-left: 281px;
+  margin-top: 10px;
+}
+
+.costumer-logged-in{
+  text-align: center;
+  position: absolute;
+  left: 184px;
+  top: -9px;
+  text-decoration: none;
+}
+
+.logout-icon{
+  font-size: 28px;
+  margin-bottom: 9px;
+}
+
+ .my-account-login > span{
+  font-family: roboto;
+  font-size: 11px;
+  position: absolute;
+  width: 93px;
+  right: -38px;
+  top: 55px;
+  transition: 1000ms;
+  opacity: 0;
+  color: white;
+  font-weight: bold;
+}
+
+.my-account-login:hover > span{
+  transition: 1000ms;
+  opacity: 1;
+}
+
+
+.sidenav {
+  height: 980px;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #050505;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.mobile-holder {
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
