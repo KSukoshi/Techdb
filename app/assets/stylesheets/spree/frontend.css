@@ -2,4 +2,5 @@
 * This is a manifest file that includes stylesheets for spree_frontend
 //= require spree/frontend/style
 //= require spree/frontend/animate
+//= require spree/frontend/normalize
 */
