@@ -372,6 +372,14 @@ body{
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  background: #0c0c0c;
+  width: 100%;
+  transition-duration: 1s;
+}
+.content-white{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   background: #ffffff;
   width: 100%;
   transition-duration: 1s;
