@@ -495,6 +495,10 @@ body{
 	border-radius: 10px;
 }
 
+.product > a:link a:visited a:hover a:active {
+  color: black;
+}
+
 .product-name {
   margin-bottom: 7px;
   font-family: 'Nova Square';
