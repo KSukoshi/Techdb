@@ -731,6 +731,13 @@ body{
   font-size: 30px;
 }
 
+.product-listing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
 .darken{
   background-color: #eaeaea;
 }
