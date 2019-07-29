@@ -26,3 +26,11 @@ function run(interval, frames) {
 }
 
 run(3000, 4); //milliseconds, frames
+
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+}
