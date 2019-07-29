@@ -483,6 +483,18 @@ body{
 	background: rgba(187,187,187,0.2);
 }
 
+.product {
+	background: #fff;
+	border: 1px solid #e2e2e2;
+	display: block;
+	margin: 45px 0;
+	padding: 12px;
+	border-bottom:4px solid #000000;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
 .product-column-holder{
   display: flex;
   flex-direction: column;
