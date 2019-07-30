@@ -55,4 +55,4 @@ Então é só rodar o servidor
 bundle exec rails s
 ```
 
-Ao criar o servidor, o site estará acessível pelo `https://localhost:3000/` e o painel de controle acessível pelo `https://localhost:3000/`
+Ao criar o servidor, o site estará acessível pelo `https://localhost:3000/` e o painel de controle acessível pelo `https://localhost:3000/admin`
