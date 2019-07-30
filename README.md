@@ -12,6 +12,8 @@ Sistema integrado ERP e e-Commerce da Tecnomult para gestão interna, providenci
 
 * MySQL 5.7.26
 
+* JQuery 3.4.1
+
 **Requerimentos:**
 
 * ImageMagick ver 6.9.7-4
